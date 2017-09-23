@@ -13,7 +13,7 @@ def init():
 
 
 def auth(email, password):
-    formtoken_headers = {'content-length': 0}
+    formtoken_headers = {'content-length': '0'}
     token = post('https://www.irccloud.com/chat/auth-formtoken',
                  headers=formtoken_headers).json()['token']
     login_data = {'email': email, 'password': password, 'token': token}
